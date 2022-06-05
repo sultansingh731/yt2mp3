@@ -13,11 +13,12 @@
   </head>
   <body>
     <div class="top-container">
-      <form action="/convert-mp3" method="post" id="form">
+      <form action="/" method="post" id="form">
         <h1><i class="fa-brands fa-youtube"></i>YOUTUBE 2 MP3 CONVERTER</h1>
-        <h4>Enter the video ID</h4>
+        <br /><br />
+        <h4>Enter the video ID / URL</h4>
         <div>
-          <input type="text" name="videoID" placeholder="video ID" /><button
+          <input type="text" name="videoID" placeholder="video ID / URL" /><button
             id="convert-btn"
           >
             converter
@@ -25,12 +26,15 @@
         </div>
       </form>
     </div>
+    <br />
     <div class="bottom-container">
       <% if(typeof success != "undefined" && success ) { %>
       <div class="success">
-        <p>><%= song_title %></p>
+        <p class="song-title"><%= song_title %></p>
         <a href="<%= song_link %>"
-          ><button id="download-btn">download</button></a
+          >
+          <br>
+          <button id="download-btn">download</button></a
         >
       </div>
       <% } else if(typeof success != "undefined" && !success ) { %>
