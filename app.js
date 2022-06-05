@@ -37,8 +37,8 @@ app.post("/convert-mp3", async (req, res) => {
       url: "https://youtube-mp36.p.rapidapi.com/dl",
       params: { id: videoId },
       headers: {
-        "X-RapidAPI-Host": "youtube-mp36.p.rapidapi.com",
-        "X-RapidAPI-Key": "f3294d8026msh476aa955e11e7bfp165e1cjsn88880060b485",
+        "X-RapidAPI-Host": process.env.API_HOST,
+        "X-RapidAPI-Key": process.env.API_KEY,
       },
     };
 
