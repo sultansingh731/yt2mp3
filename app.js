@@ -12,7 +12,7 @@ app.listen(PORT, () => {
   console.log(`server listen at ${PORT}`);
 });
 
-//  set template engine
+
 app.set("view engine", "ejs");
 app.use(
   express.urlencoded({
