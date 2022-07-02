@@ -12,7 +12,7 @@ app.listen(PORT, () => {
   console.log(`server listen at ${PORT}`);
 });
 
-
+//  template engine
 app.set("view engine", "ejs");
 app.use(
   express.urlencoded({
@@ -67,7 +67,6 @@ app.post("/", async (req, res) => {
 // https://www.youtube.com/watch?v=B5_6jfGsyjA
 // B5_6jfGsyjA
 
-
 function extrectVideoId(videoUrl) {
   try {
     if (videoUrl.includes("/")) {
@@ -84,6 +83,4 @@ function extrectVideoId(videoUrl) {
   } catch (error) {
     return undefined
   }
-  
-
 }
